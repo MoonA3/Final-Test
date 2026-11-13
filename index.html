@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xếp Hình</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex justify-center p-8">
+    <div class="bg-white p-6 rounded shadow w-[400px] text-center">
+        <button id="nutBam" class="bg-green-500 text-white px-6 py-2 font-bold rounded">
+            Bắt đầu
+        </button>
+        <p id="thongBao" class="text-red-500 font-bold mt-2" style="display: none;">
+            YOU WIN!
+        </p>
+        <div class="flex gap-4 mt-4 text-sm text-center">
+            <div class="flex-1 bg-blue-50 border border-blue-200 p-3 rounded">
+                <p class="font-bold text-blue-800">Đồng hồ</p>
+                <p id="dongHo" class="text-xl font-bold text-blue-600 mt-1">00:00</p>
+            </div>
+            <div class="flex-1 bg-gray-50 border border-gray-200 p-3 rounded">
+                <p class="font-bold text-gray-800">Cách chơi</p>
+                <p class="text-gray-600 mt-1">
+                    Phím W, A, S, D<br>hoặc Mũi tên
+                </p>
+            </div>
+        </div>
+        <div id="banCo" class="grid grid-cols-4 gap-2 bg-gray-200 p-2 mt-5 mx-auto w-max rounded"></div>
+        <div class="mt-6">
+            <h3 class="font-bold text-gray-700 mb-2">Lịch sử lượt chơi</h3>
+            <table class="w-full border text-center text-sm">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th>Lượt</th>
+                        <th>Bước</th>
+                        <th>Thời gian</th>
+                    </tr>
+                </thead>
+                <tbody id="lichSu"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
