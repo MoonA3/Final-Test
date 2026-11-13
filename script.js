@@ -77,28 +77,28 @@ function diChuyen(huong, laNguoiDung) {
 }
 
 function kiemTraThang() {
-    let thang = true;
-    for (let i = 0; i < 12; i++) {
-        if (mang[i] !== mangThang[i]) {
-            thang = false;
-        }
+  let thang = true;
+  for (let i = 0; i < 12; i++) {
+    if (mang[i] !== mangThang[i]) {
+      thang = false;
     }
-
-    if (thang === true) {
-        dangChoi = false;
-        clearInterval(boDem);
-        thongBao.style.display = "block";
-        nutBam.innerText = "Chơi lại";
-
-        luotChoi++;
-        lichSu.innerHTML += `
-        <tr>
-            <td> ${luotChoi} </td>
-            <td> ${buocDi} </td>
-            <td> ${tinhThoiGian(giay)} </td>
-        </tr>
+  }
+  if (thang === true) {
+    dangChoi = false;
+    clearInterval(boDem);
+    thongBao.style.display = "block";
+    nutBam.innerText = "Chơi lại";
+    
+    luotChoi++;
+    
+    lichSu.innerHTML += `
+      <tr>
+        <td class="border p-2">${luotChoi}</td>
+        <td class="border p-2">${buocDi}</td>
+        <td class="border p-2">${tinhThoiGian(giay)}</td>
+      </tr>
     `;
-    }
+  }
 }
 
 nutBam.onclick = function () {
