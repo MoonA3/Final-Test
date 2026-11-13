@@ -88,9 +88,7 @@ function kiemTraThang() {
     clearInterval(boDem);
     thongBao.style.display = "block";
     nutBam.innerText = "Chơi lại";
-    
     luotChoi++;
-    
     lichSu.innerHTML += `
       <tr>
         <td class="border p-2">${luotChoi}</td>
